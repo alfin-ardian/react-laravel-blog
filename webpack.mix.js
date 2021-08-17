@@ -10,8 +10,6 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
- const mix = require('laravel-mix');
  require('dotenv').config();
  mix.react('resources/js/admin.js', 'public/js')
     .react('resources/js/website.js', 'public/js')
