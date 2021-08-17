@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/partials/Header';
+import Sidebar from './components/partials/Sidebar';
+import Footer from './components/partials/Footer';
+
 export default class App extends Component {
     render() {
         return (
-            <div className="container-fluid">
-                <div className="row justify-content-center">
-                    <div className="col-md-8">
-                        <div className="card">
-                            <div className="card-header">Hello</div>
-                            <div className="card-body">I'm the admin panel</div>
-                        </div>
-                    </div>
+            <div className="wrapper">
+                <Header/>
+                <Sidebar/>
+
+                <div className="content-wrapper">
+
                 </div>
+
+                <Footer/>
             </div>
         );
     }
 }
+
 if (document.getElementById('app')) {
     ReactDOM.render(<App />, document.getElementById('app'));
 }
